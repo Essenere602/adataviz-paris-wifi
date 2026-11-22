@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paris Wi-Fi — Adataviz</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <header>
+    <p>ADATAVIZ · OPEN DATA PARIS</p>
+    <h1>Les sites équipés du Wi-Fi à Paris</h1>
+    <p>Explorez les lieux publics disposant du service Paris Wi-Fi.</p>
+    <div class="stats">
+      <p><strong id="total-count">—</strong><br>Sites dans le dataset</p>
+      <p><strong id="shown-count">—</strong><br>Fiches affichées</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <div>
+        <label for="search">Rechercher un site</label>
+        <input id="search" type="search" placeholder="Bibliothèque, rue, piscine…">
+      </div>
+      <div>
+        <label for="status-filter">État du service</label>
+        <select id="status-filter">
+          <option value="tous">Tous</option>
+          <option value="opérationnel">Opérationnel</option>
+          <option value="non opérationnel">Non opérationnel</option>
+        </select>
+      </div>
+      <div>
+        <label for="sort">Trier</label>
+        <select id="sort">
+          <option value="az">Nom A à Z</option>
+          <option value="za">Nom Z à A</option>
+        </select>
+      </div>
+    </section>
+
+    <p id="message">Chargement des données…</p>
+    <section id="cards" class="cards"></section>
+
+    <p class="source">
+      Source :
+      <a href="https://opendata.paris.fr/explore/dataset/sites-disposant-du-service-paris-wi-fi/">
+        Open Data Paris
+      </a>
+    </p>
+  </main>
+</body>
+</html>
